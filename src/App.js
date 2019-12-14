@@ -32,7 +32,7 @@ class App extends Component {
 
   postRequest = () => {
     let search = this.state.currentSearch
-    axios.post(`https://data.gov.il/api/3/action/datastore_search?resource_id=b9d690de-0a9c-45ef-9ced-3e5957776b26&q=${search}&limit=50`)
+    axios.post(`https://data.gov.il/api/3/action/datastore_search?resource_id=${process.env.RESOURCE_ID}&q=${search}&limit=50`)
       .then(res => {
         console.log(res.data.result.records)
         if (res.data.result.records[0]) {
