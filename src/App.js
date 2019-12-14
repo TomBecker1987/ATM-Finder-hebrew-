@@ -90,7 +90,7 @@ class App extends Component {
           </Grid>
           <Grid item sm={9} style={{height: '100vh', paddingTop:20}}> 
             <Map 
-              googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyC6Rq3UCzvNvrLdw6L-Nj_aCZbzNQj9NJA`}
+              googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
               loadingElement={<div style={{height: "100%"}}/>}
               containerElement={<div style={{height: "100%"}}/>}
               mapElement={<div style={{height: "100%"}}/>}
